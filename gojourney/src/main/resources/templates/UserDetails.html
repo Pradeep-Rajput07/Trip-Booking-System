@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .form-container {
+            position: absolute;
+            top: 1%;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1.5s ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h2 {
+            
+            margin-bottom: 30px;
+            color: #222;
+            text-align: center;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 100, 250, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .form-group .radio-group,
+        .form-group .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-right: 8px;
+            
+        }
+
+        .form-group input[type="radio"]:hover,
+        .form-group input[type="checkbox"]:hover {
+            cursor: pointer;
+        }
+
+        .form-group .half-width {
+            width: calc(50% - 10px);
+            display: inline-block;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 10px 20px rgba(0, 91, 201, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .submit-btn:focus {
+            outline: none;
+        }
+   
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        font-family: 'Poppins', sans-serif;
+                        background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+                        background-size: cover;
+                        background-position: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 200vh;
+                        color: #333;
+                    }
+            
+                    .form-container {
+                        background-color: rgba(255, 255, 255, 0.9);
+                        padding: 50px;
+                        border-radius: 20px;
+                        width: 100%;
+                        max-width: 900px;
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+                        backdrop-filter: blur(15px);
+                        animation: slideIn 1s ease-in-out;
+                    }
+            
+                    @keyframes slideIn {
+                        from { transform: translateY(100%); opacity: 0; }
+                        to { transform: translateY(0); opacity: 1; }
+                    }
+            
+                    h2 {
+                        margin-bottom: 30px;
+                        color: #333;
+                        text-align: center;
+                        font-size: 32px;
+                        letter-spacing: 1px;
+                    }
+            
+                    .form-group {
+                        margin-bottom: 25px;
+                        position: relative;
+                    }
+            
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 8px;
+                        font-weight: 600;
+                    }
+            
+                    .form-group input,
+                    .form-group select,
+                    .form-group textarea {
+                        width: 100%;
+                        padding: 14px;
+                        border-radius: 8px;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                        font-size: 16px;
+                        transition: box-shadow 0.3s ease, transform 0.3s ease;
+                    }
+            
+                    .form-group input:focus,
+                    .form-group select:focus,
+                    .form-group textarea:focus {
+                        outline: none;
+                        box-shadow: 0 0 12px rgba(0, 100, 250, 0.4);
+                        transform: translateY(-2px);
+                    }
+            
+                    .form-group .radio-group,
+                    .form-group .checkbox-group {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 15px;
+                        margin-top: 10px;
+                    }
+            
+                    .form-group input[type="radio"],
+                    .form-group input[type="checkbox"] {
+                        margin-right: 8px;
+                    }
+            
+                    .form-group input[type="radio"]:hover,
+                    .form-group input[type="checkbox"]:hover {
+                        cursor: pointer;
+                    }
+            
+                    .form-group .half-width {
+                        width: calc(50% - 10px);
+                        display: inline-block;
+                    }
+            
+                    .submit-btn {
+                        background-color: #28a745;
+                        color: white;
+                        padding: 15px 30px;
+                        border: none;
+                        border-radius: 10px;
+                        font-size: 20px;
+                        cursor: pointer;
+                        width: 100%;
+                        margin-top: 20px;
+                        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+                    }
+            
+                    .submit-btn:hover {
+                        background-color: #218838;
+                        box-shadow: 0 10px 20px rgba(33, 136, 56, 0.4);
+                        transform: translateY(-3px);
+                    }
+            
+                    .submit-btn:focus {
+                        outline: none;
+                    }
+            
+                    @media screen and (max-width: 768px) {
+                        .form-group .half-width {
+                            width: 100%;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="form-container">
+                    <h2>Fill the Details</h2>
+                    <form action="/SaveDetailsForRoom" method="post">
+                        <!-- Personal Information -->
+                        <div class="form-group">
+                            <div class="half-width">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="half-width">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name</label>
+                            <input type="text" id="fatherName" name="fatherName" placeholder="Enter your fatherName" required>
+                        </div>
+            
+                        <!-- Date of Birth -->
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+            
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                        </div>
+            
+                        <!-- Contact Information -->
+                        <div class="form-group">
+                            <div class="half-width">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="half-width">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                        </div>
+            
+                        <!-- Country -->
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="" disabled selected>Select your country</option>
+                                <option value="usa">United States</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="india">India</option>
+                                
+                            </select>
+                        </div>
+            
+                        <!-- Booking Information -->
+                        <div class="form-group">
+                            <div class="half-width">
+                                <label for="checkin">Check-in Date</label>
+                                <input type="date" id="checkin" name="checkin" required>
+                            </div>
+                            <div class="half-width">
+                                <label for="checkout">Check-out Date</label>
+                                <input type="date" id="checkout" name="checkout" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="roomType">Room Type</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="roomType" value="single" required> Single Bed</label>
+                                <label><input type="radio" name="roomType" value="double" required> Double Bed</label>
+                                <label><input type="radio" name="roomType" value="suite" required> Suite</label>
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label>Marital Status</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="status" value="single" required> Single</label>
+                                <label><input type="radio" name="status" value="married" required> Married</label>
+                            </div>
+                        </div>
+            
+                        <!-- Additional Services -->
+                        <div class="form-group">
+                            <label>Additional Services</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="services" value="breakfast"> Breakfast</label>
+                                <label><input type="checkbox" name="services" value="airport-pickup"> Airport Pickup</label>
+                                <label><input type="checkbox" name="services" value="spa"> Spa Package</label>
+                                <label><input type="checkbox" name="services" value="gym"> Gym Access</label>
+                                <label><input type="checkbox" name="services" value="wifi"> Free Wi-Fi</label>
+                            </div>
+                        </div>
+            
+                        <!-- Booking For -->
+                        <div class="form-group">
+                            <label>Booking for Someone Else?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="bookingFor" value="friend"> Friend</label>
+                                <label><input type="radio" name="bookingFor" value="family"> Family</label>
+                            </div>
+                        </div>
+            
+                        <!-- Number of Days -->
+                        <div class="form-group">
+                            <label for="days">Number of Days</label>
+                            <input type="number" id="days" name="days" placeholder="Enter number of days" required>
+                        </div>
+            
+                        <!-- Special Requests -->
+                        <div class="form-group">
+                            <label for="specialRequests">Special Requests</label>
+                            <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Enter any special requests or requirements"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">Book Now</button>
+                        </div>
+                    </form>
+                </div>
+            </body>
+</html>
